@@ -62,9 +62,9 @@ You have two options for updating: use the automatic update script (recommended)
         To verify the archive before extracting it, download it together with its `checksum.txt` release asset instead:
 
         ```sh
-        curl -LO https://github.com/pelican/panel/releases/latest/download/panel.tar.gz
-        curl -LO https://github.com/pelican/panel/releases/latest/download/checksum.txt
-        sha256sum -c checksum.txt && sudo tar -xzvf panel.tar.gz && rm panel.tar.gz checksum.txt
+        sudo curl -fLO https://github.com/pelican/panel/releases/latest/download/panel.tar.gz
+        sudo curl -fLO https://github.com/pelican/panel/releases/latest/download/checksum.txt
+        sudo sha256sum -c checksum.txt && sudo tar -xzvf panel.tar.gz && sudo rm panel.tar.gz checksum.txt
         ```
 
         Once the archive is downloaded and extracted we need to set the correct permissions on the cache and storage directories to avoid
